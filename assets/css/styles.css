@@ -1,0 +1,248 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        align-items: center;
+        background-color: #0E1323;
+        display: flex;
+        font-family: 'Rubik';
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .dashboard {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "profile work play study"
+            "profile excerise social self-care";
+        width: 80%;
+    }
+
+    .card {
+        background-color: #1C204B;
+        border-radius: 15px;
+    }
+
+    .profile {
+        background-color: #1C204B;
+        grid-area: profile;
+    }
+
+    .work {
+        grid-area: work;
+
+        .top-section {
+            background-color: #FF8B64;
+        }
+    }
+
+    .play {
+        grid-area: play;
+
+        .top-section {
+            background-color: #55C2E6;
+        }
+    }
+
+    .study {
+        grid-area: study;
+
+        .top-section {
+            background-color: #FF5E7D;
+        }
+    }
+
+    .excerise {
+        grid-area: excerise;
+
+        .top-section {
+            background-color: #4BCF82;
+        }
+    }
+
+    .social {
+        grid-area: social;
+
+        .top-section {
+            background-color: #7335D2;
+        }
+    }
+
+    .self-care {
+        grid-area: self-care;
+
+        .top-section {
+            background-color: #F1C75B;
+        }
+    }
+
+    .card-title {
+        color: #FFFFFF;
+        margin: 0;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .card-current-hrs {
+        color: #FFFFFF;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 300;
+        padding: 24px 0 16px 0;
+    }
+
+    .card-last-week-hrs {
+        color: #BBC0FF;
+        margin: 0;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .top-section {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        height: 60px;
+        justify-content: end;
+        padding-right: 15px;
+    }
+
+    .bottom-section {
+        background-color: #1C204B;
+        border-radius: inherit;
+        padding: 30px;
+        position: relative;
+        top: -14px;
+        z-index: 1;
+    }
+
+    .header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-section-profile {
+        background-color: #5747EA;
+        padding: 37px 32px;
+        border-radius: inherit;
+    }
+
+    .profile-img {
+        border: solid #FFFFFF 3px;
+        border-radius: 50%;
+        height: 120px;
+        object-fit: cover;
+        object-position: 1px;
+        width: 120px;
+    }
+
+    .profile-name-container {
+        color: #FFFFFF;
+        margin-top: 43px;
+    }
+
+    .profile-report {
+        color: #BBC0FF;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .profile-names {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .bottom-section-profile {
+        padding: 26px 36px;
+    }
+
+    .filter {
+        font-size: 18px;
+        margin-bottom: 21px;
+        color: #7078C9;
+    }
+
+    .active {
+        color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 1090px) {
+        .dashboard {
+            gap: 24px;
+            grid-template-areas:
+                "profile"
+                "work"
+                "play"
+                "study"
+                "excerise"
+                "social"
+                "self-care";
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 232px 160px 160px 160px 160px 160px 160px;
+            height: 100%;
+            margin-bottom: 81px;
+            margin-top: 81px;
+        }
+
+        .card {
+            height: fit-content;
+        }
+
+        .card-current-hrs {
+            font-size: 32px;
+            padding: 0;
+        }
+
+        .hrs-container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .bottom-section {
+            padding: 20px;
+        }
+
+        .bottom-section-profile {
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+        }
+
+        .filter {
+            margin-bottom: 0;
+        }
+
+        .profile-names {
+            font-size: 23px;
+        }
+
+        .top-section-profile {
+            align-items: center;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .profile-img {
+            height: 90px;
+            width: 90px;
+        }
+
+        .profile-name-container {
+            margin-top: 0;
+        }
+    }
